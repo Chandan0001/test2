@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form sample</title>
+
+</head>
+<body>
+
+	<h2>Text input fields</h2>
+
+	<form>
+		
+		<fieldset>
+			<legend>Form fill</legend>
+		<label for="fname">First name:</label><br>
+		<input type="Text" name="fname" value="Chandan" id="fname"> <br>
+
+		<label for="lname">Last name:</label><br>
+		<input type="text" name="lname" value="Kumar" id="lname"> <br><br>
+
+		<input type="radio" name="fav_language" id="html" value="HTML">
+		<label for="html">HTML</label> <br>
+
+		<input type="radio" name="fav_language" id="css" value="CSS">
+		<label for="css" > CSS</label><br>
+
+		<input type="radio" id="javascript" name="fav_language" value="Javascript">
+		<label for="javascript">Javascript</label>
+
+		<h2>Checkboxes</h2>
+
+		<input type="checkbox" id="v1" name="v1" value="Bike">
+		<label for="v1">I have a Bike</label><br>
+		<input type="checkbox" id="v2" name="v2" value="Car">
+		<label for="v2">I have a Car</label><br>
+		<input type="checkbox" id="v3" name="v3" value="Boat">
+		<label for="v3">I have a boat</label><br>
+		<label for="pwd">Password:</label>
+		<input type="password" id="pwd" name="pwd"><br><br>
+		<input type="submit" value= "Submit">
+
+		<h2>Select elements</h2>
+
+		<label for="cars">Choose a car:</label>
+		<select id="cars" name="cars">
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="fiat">Fiat</option>
+			<option value="audi">Audi</option>
+		</select>
+<br><br>
+		<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+		<br><br>
+	</fieldset>
+	<br>
+	<label for="phone">Enter a phone number:</label>
+	<input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"> <br><br>
+	</form>
+
+	<button type="button" onclick="alert('Hello World!')"> Click karo</button>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Position</title>
+
+	<style type="text/css">
+		div.static {
+			position: static;
+			border: 3px solid #73AD21;
+		}
+
+		div.relative {
+			position: relative;
+			border: 3px solid #73AD21;
+		}
+
+		div.fixed {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: 300px;
+			border: 3px solid #73AD21;
+		}
+
+		div.absolute{
+			position: absolute;
+			top: 80px;
+			right: 0;
+			width: 200px;
+			height: 100px;
+			border: 3px solid #73AD21;
+		}
+
+		img {
+			top: 500px;
+			z-index: -1;
+			float: right;
+		}
+
+		div.visible {
+			background-color: coral;
+			width: 200px;
+			height: 65px;
+			border: 1px solid;
+			overflow: auto;
+		}
+
+		div{
+			float: left;
+			padding: 15px;
+		}
+
+		.div1{
+			background-color: orange;
+		}
+		.dv2{
+			background-color: white;
+		}
+		.div3{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+
+<h2>Position: static;</h2>
+
+<p>An element with position: static is not positioned in any way; it is positioned according to the normal flow of the page: </p>
+
+<div class="static"> This div element has position static;</div> <br>
+<div class="relative"> This div element has position relative;</div> <br>
+
+<div class="fixed"> This div element has position fixed;</div>
+
+<div class="absolute">This div element has position: absolute;</div>
+
+<img src="C:\chandan\image\bird.jfif">
+<p>Becase the image has a z-index of -1, it will be placed behind the text.</p>
+
+<h2>overflow: visible</h2>
+
+<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box</p>
+
+<div class="visible">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div> <br><br>
+
+<div class="div1">Div1</div>
+<div class="div2">Div2</div>
+<div class="div3">Div3</div>
+</body>
+</html>

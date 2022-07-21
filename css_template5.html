@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Template</title>
+
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/*Style the top navigation bar*/
+		.topnav {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		/*style the top nav link*/
+
+		.topnav a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		/*Change color on hover*/
+		.topnav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		/*style the content*/
+		.content {
+			background-color: #ddd;
+			padding: 10px;
+			/* height: 200px; */
+		}
+
+		/*Style the footer*/
+		.footer {
+			background-color: #f1f1f1;
+			padding: 10px;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="C:/Users/Sharma/test2/site2/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="topnav">
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+	</div>
+
+	<div class="content">
+		<h2>CSS Template</h2>
+		<p>A Topnav, content and a footer.</p>
+
+		<!--JS sort array method-->
+		<h2>Javascript Array sort</h2>
+		<p>Click the button (again and again) to sort the array in random order.</p>
+
+		<button onclick="myFunction()">Try it</button>
+		<p id="randomsort"></p>
+
+		<script type="text/javascript">
+			const points = [40, 100, 1, 5, 25, 10];
+			document.getElementById("randomsort").innerHTML=points;
+			function myFunction(){
+				points.sort(function(a,b){return 0.5 - Math.random()});
+				document.getElementById("randomsort").innerHTML = points;
+			}
+		</script>
+
+		<!--JavaScript Fisher Yates method-->
+		<h2>Javascript Fisher Yates method</h2>
+		<p>Click the button (again and again) to sort the array in random order.</p>
+
+		<button onclick="myFunction1()">Try it</button>
+		<p id="fisherYate"></p>
+
+		<script type="text/javascript">
+			const points1 = [100, 50, 30, 400, 534, 0, 1];
+			document.getElementById("fisherYate").innerHTML= points1;
+
+			function myFunction1(){
+				for (let i = points1.length - 1; i >= 0; i--) {
+					let j = Math.floor(Math.random()*i)
+					let k = points1[i]
+					points1[i] = points1[j]
+					points1[j] = k
+				}
+
+				document.getElementById("fisherYate").innerHTML= points1;
+
+			}
+
+		</script>
+
+		<!--Find the lowest and highest Array value-->
+
+		<h2>Find the lowest Array value</h2>
+		<p>The lowest value is <span id="lower"></span></p>
+		<p>The highest value is <span id="highest"></span></p>
+
+		<script type="text/javascript">
+			const array1 = [40, 100, 1, 5, 25, 10];
+			array1.sort(function(a, b){return a - b});
+			document.getElementById("lower").innerHTML= array1[0];
+			document.getElementById("highest").innerHTML= array1[array1.length-1];
+		</script>
+
+		<!--Javascript Array.filter()-->
+		<h2>Javascript Array.filter()</h2>
+		<p>Creates a new array with all array elements that passes a test.</p>
+
+		<p id="filter"></p>
+
+		<script type="text/javascript">
+			const numbers = [45, 4, 9, 16, 25];
+			const over18 = numbers.filter(myFunction2);
+
+			document.getElementById("filter").innerHTML = over18;
+
+			function myFunction2(value, index, array){
+				return value > 18;
+			}
+		</script>
+
+		<!--Javascript const-->
+
+		<h2>Javascript const</h2>
+		<p>Declaring a constant array does Not make the elements unchangeable:</p>
+
+		<p id="constant"></p>
+
+		<script type="text/javascript">
+			// create an array:
+			const cars = ["Saab", "volvo", "BMW"];
+
+			//Change an element:
+			cars[0] = "Toyota";
+
+			// Add an element
+			cars.push("Audi");
+
+			// Display the array:
+			document.getElementById("constant").innerHTML= cars;
+		</script>
+
+		<!--Javascript new date object-->
+
+		<h2>Javascript new Date()</h2>
+		<p>Using new Date(), creates a new date object with the current date and time.</p>
+		<p id="date"></p>
+		<h2>JavaScript GetTime() Method</h2>
+		<p id="getdate"></p>
+
+		<!--JavaScript getFullYear()-->
+		<h2>The getFullYear() method</h2>
+		<p id="getfullyear"></p>
+
+		<!--JS getMonth() method-->
+		<h2>getMonth() method</h2>
+		<p id="getmonth"></p>
+
+		<!--JS Error code-->
+		<h2>JavaScript error code</h2>
+		<p>How to use <b>catch</b> to display an error.</p>
+		<p id="error"></p>
+
+		<!--JS try catch-->
+		<h2>JavaScript try catch</h2>
+		<p>Please input a number between 5 and 10:</p>
+
+		<input id="num" type="text" >
+		<button type="button" onclick="myFunction2()">Test Input</button>
+		<p id="p01"></p>
+
+		<!--JavaScript Arrow function-->
+		<p id="arrow1"></p>
+
+		<!--Create a class method named "age"-->
+		<h2>Class Method</h2>
+		<p id="carage"></p>
+
+		<!--Create Object from JSON string-->
+
+		<h2>Create Object from JSON String</h2>
+		<p id="json"></p>
+
+		<script type="text/javascript">
+			//JSON Object creation
+
+			let text = '{"employees":[' +
+			'{"firstName":"John","lastName":"Doe"},' + 
+			'{"firstName":"Anna","lastName":"Smith"},' +
+			'{"firstName":"Peter","lastName":"Jones"}]}';
+
+			const obj = JSON.parse(text);
+			document.getElementById("json").innerHTML =
+			obj.employees[1].firstName +" "+ obj.employees[1].lastName;
+			console.log(obj);
+		</script>
+		<script type="text/javascript">
+			
+			class car{
+				constructor(name, year) {
+					this.name = name;
+					this.year = year;
+				}
+
+				age() {
+					let date = new Date;
+					return date.getFullYear() - this.year;
+				}
+
+
+			}
+
+			let myCar = new car("Thar", 2019);
+			document.getElementById("carage").innerHTML = "my car is " +myCar.age() + " year old."
+		</script>
+
+		<script type="text/javascript">
+
+			var hello;
+
+			hello = () => {
+				return "Hello World";
+			}
+
+			document.getElementById("arrow1").innerHTML = hello();
+			function myFunction2() {
+				const message = document.getElementById("p01");
+				message.innerHTML = "";
+				let x= document.getElementById("num").value;
+				try {
+					if(x == "") throw "empty";
+					if(isNaN(x)) throw "not a number";
+					x = Number(x);
+					if(x<5) throw "too low";
+					if(x>10) throw "too high";
+				}
+
+				catch(err) {
+					message.innerHTML = "Input is " + err;
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+
+			//JavaScript error code
+			try{
+				adddlert("Welcome Guest");
+			}
+			catch(err) {
+				document.getElementById("error").innerHTML = err.message;
+			}
+			const d = new Date();
+			document.getElementById("date").innerHTML= d;
+
+			// Javascript GetTime() Method
+
+			document.getElementById("getdate").innerHTML= d.getTime();
+
+			// JavaScript getFullYear() method
+
+			document.getElementById("getfullyear").innerHTML= d.getFullYear();
+			// JS getMoth() method
+			document.getElementById("getmonth").innerHTML= d.getMonth()+1;
+
+		</script>
+
+		<!--Nested JS Objects and Arrays-->
+		<h2>Nested Javascript Objects and Arrays</h2>
+		<p id="nestObj"></p>
+
+		<script type="text/javascript">
+			let x= "";
+			const myObj = {
+				name: "John",
+				age: 30,
+				cars: [
+				{name: "BMW", models: ["Fiesta", "Focus", "Mestang"]},
+				{name: "Ford", models: ["320", "X3", "X5"]},
+				{name: "Fiat", models: ["500", "Panda"]}
+				]
+			}
+
+			for(let i in myObj.cars) {
+				x += "<h2>" +myObj.cars[i].name + "</h2>";
+				for (let j in myObj.cars[i].models) {
+					x += myObj.cars[j].models[j] + "<br>";
+				}
+			}
+
+			document.getElementById("nestObj").innerHTML= x;
+		</script>
+
+		<!--Javascript Getter (The get Keyword)-->
+
+		<h2> JavaScript getter (The get Keyword) </h2>
+
+		<script type="text/javascript">
+			// Create an object
+
+			const person = {
+				firstName: "John",
+				lastName: "Doe",
+				language: "en",
+				get lang() {
+					return this.language;
+				}
+			}
+
+			document.getElementById("getter").innerHTML = person.lang;
+		</script>
+
+		<!--JS object constructor-->
+
+		<h2 style="color: yellow;">JavaScript Object constructor</h2>
+		<p id="objConst"></p>
+
+		<script type="text/javascript">
+			// Constructor Function for Person Objects
+			function Person(first, last, age, eye) {
+				this.firstName = first;
+				this.lastName = last;
+				this.age = age;
+				this.eyeColor = eye;
+			}
+
+
+			// Create two Person objects
+			const myDetails = new Person("Chandan", "Kumar", 27, "black");
+			const myFriend = new Person("Dhritendu", "Tiwary", 29, "Brown");
+
+			// Display age
+			document.getElementById("objConst").innerHTML = "I am " + myDetails.age+ ". My friend is " + myFriend.age + ".";
+		</script>
+
+		<!--Create a Set-->
+		<h2 style="color: lightgoldenrodyellow;">Create a Set</h2>
+		<p id="sett"></p>
+
+		<script type="text/javascript">
+			const letters = new Set();
+
+			// Add values to the Set
+
+			letters.add("a");
+			letters.add("b");
+			letters.add("c");
+
+			// display set.size
+			document.getElementById("sett").innerHTML = letters.size;
+		</script>
+
+		<!--JavaScript Map Objects-->
+
+		<h2 style="color: lightgoldenrodyellow;">JavaScript Map Objects</h2>
+		<p id="mapObj"></p>
+
+		<script type="text/javascript">
+			// Create a Map
+
+			const fruits = new Map([
+				["apples", 500],
+				["bananas", 300],
+				["oranges", 200]
+				]);
+
+			// Set Map Values
+			fruits.set("mango", 400);
+
+			document.getElementById("mapObj").innerHTML = fruits.get("mango")+ " size of the map is "+ fruits.size;
+		</script>
+	</div>
+
+	<div class="footer">
+		<p>Footer</p>
+	</div>
+</body>
+</html>

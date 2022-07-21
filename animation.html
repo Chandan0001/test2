@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation</title>
+
+	<style>
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			-webkit-animation: myfirst 6s;
+			animation: myfirst 5s;
+		}
+
+		/*Chrome, Safari, Opera*/
+
+		@-webkit-keyframes myfirst {
+			from {background: red;}
+			to {background: black;}
+		}
+
+		@keyframes myfirst {
+			from {background: red;}
+			to {background: black;}
+		}
+
+        #borderimg {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(C:/chandan/image/border1.jpg) 20% round;
+        }
+
+        #borderimgg {
+            border:  15px solid transparent;
+            padding: 15px;
+            border-image: url(c:/chandan/image/border2.jpg) 30% round;
+        }
+
+        #borderimggg {
+            border:  15px solid transparent;
+            padding: 15px;
+            border-image: url(c:/chandan/image/border2.jpg) 50 stretch; 
+                }
+            
+            #example1 {
+                background-image: url(c:/chandan/image/flower.jpg), url(c:/chandan/image/paper.jpg);
+                background-position: right bottom, left top;
+                background-repeat: no-repeat, repeat;
+                padding: 15px;
+            } 
+
+            #grad1 {
+                height: 200px;
+                background-color: red;
+                background-image: linear-gradient(red, yellow);
+            }
+
+            #grad2 {
+                height: 200px;
+                background-color: red;
+                background-image: linear-gradient(to right, red, yellow);
+            }
+
+            #grad3 {
+                height: 200px;
+                background-color: red;
+                background-image: linear-gradient(to bottom right, red, yellow);
+            }
+
+            #grad4 
+            {
+                height: 200px;
+                background-image: linear-gradient(orange 33%, white 34%, green);
+            }
+
+            #grad5
+            {
+                height: 200px;
+                background-color: red;
+                background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+            }
+
+            #grad6
+            {
+                height: 200px;
+                background-color: red;
+                background-image: repeating-linear-gradient(45deg, red, yellow 7%, green 10%);
+            }
+
+            #grad7
+            {
+                height: 200px;
+                background-color: red;
+                background-image: repeating-linear-gradient(190deg, red, yellow 7%, green 10%);
+            }
+
+            #grad8
+            {
+                height: 200px;
+                background-color: red;
+                background-image: repeating-linear-gradient(90deg, red, yellow 7%, green 10%);
+            }
+
+            #grad9
+            {
+                height: 200px;
+                background-color: red;
+                background-image: repeating-linear-gradient(45deg, red 0px, red 10px, red 10px, yellow 10px, yellow 20px);
+            }
+
+            #grad10 
+            {
+                height: 150px;
+                width: 200px;
+                background-color: red;
+                background-image: radial-gradient(red, yellow, green);
+            }
+
+            #grad11
+            {
+                height: 150px;
+                width: 200px;
+                background-color: red;
+                background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+            }
+
+            #grad12
+            {
+                height: 150px;
+                width: 200px;
+                background-color: red;
+                background-image: radial-gradient(circle, red, yellow, green);
+            }
+
+            #grad13
+            {
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+            }
+
+            #grad14
+            {
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+            }
+
+            #grad15
+            {
+                height: 200px;
+                width: 500px;
+                background-color: red;
+                background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+            }
+
+            /*conic gradient*/
+            #grad16
+            {
+                height: 200px;
+                width: 200px;
+                background-image: conic-gradient(red, yellow, green);
+            }
+
+            #grad17
+            {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                background-image: conic-gradient(red, yellow,blue, green, black);
+            }
+
+            #grad18{
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+            }
+
+            /* conic gradient pie chart */
+            #grad19
+            {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                background-image: conic-gradient(red, yellow, green, blue, black);
+                border-radius: 50%;
+            }
+
+            #grad20
+            {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+                border-radius: 50%;
+            }
+
+            #grad21 {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                background-image: conic-gradient(at 60% 45%, red, yellow, green);
+                border-radius: 50%;
+            }
+
+            #grad22 {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                background-image: repeating-conic-gradient(red 10%, yellow 20%);
+                border-radius: 50%;
+            }
+
+            #grad23 {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+                border-radius: 50%;
+            }
+
+            #shadow1
+            {
+                text-shadow: 2px 2px 5px red;
+
+            }
+
+            #shadow2
+            {
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+            }
+
+            #shadow3
+            {
+                text-shadow: 0 0 3px #FF0000;
+            }
+
+            #shadow4
+            {
+                text-shadow: 0 0 3px #FF0000, 0 0 5px yellow;
+            }
+
+            #shadow5
+            {
+                color: white;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            }
+
+            /*Box shadow*/
+            #shadow6
+            {
+                width: 300px;
+                height: 200px;
+                padding: 15px;
+                background-color: coral;
+                box-shadow: 10px 10px;
+            }
+
+            #shadow7
+            {
+                width: 300px;
+                height: 100px;
+                padding: 15px;
+                background-color: coral;
+                box-shadow: 10px 10px lightblue;
+            }
+
+            #shadow8
+            {
+                border: 1px solid;
+                padding: 10px;
+                box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+                margin: 20px;
+            }
+
+            #shadow9
+            {
+                border: 1px solid;
+                padding: 10px;
+                box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+                margin: 20px;
+            }
+
+
+            /*CSS Text effects*/
+
+            p.test1 {
+                white-space: nowrap;
+                width: 200px;
+                border: 1px solid #000000;
+                overflow: hidden;
+                text-overflow: clip;
+            }
+
+            p.test2 {
+                white-space: nowrap;
+                width: 200px;
+                border: 1px solid #000000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p.test3 {
+                width: 11em;
+                border: 1px solid #000000;
+                word-wrap: break-word;
+            }
+
+            p.test4 {
+                writing-mode: horizontal-tb;
+            }
+
+            span.test5 {
+                writing-mode: vertical-rl;
+            }
+
+            p.test6 {
+                writing-mode: vertical-rl;
+            }
+
+            /*2D transform*/
+            .transform1{
+                width: 300px;
+                height: 100px;
+                background-color: yellow;
+                border: 1px solid black;
+            }
+
+            #myDiv{
+                transform: rotate(20deg);
+            }
+
+            #divskew{
+                transform: skewX(20deg);
+            }
+
+            .transform2 {
+                width: 300px;
+                height: 100px;
+                background-color: yellow;
+                border: 1px solid black;
+                transform:  translate3d(25px, 20px, 20px);
+            }
+
+            .transform3 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: width 2s, height 4s;
+            }
+
+            transform3:hover {
+                width: 300px;
+                height: 300px;
+            }
+
+            /* animation example */
+            #animat{ 
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation-name: example;
+                animation-duration: 4s;
+                animation-iteration-count: 1;
+
+            }
+
+            @keyframes example {
+                0% {background-color: red; left: 0px; top: 0px;}
+                25% {background-color: yellow; left: 200px; top: 0px;}
+                50% {background-color: blue; left: 200px; top: 200px;}
+                75% {background-color: green; left: 0px; top: 200px;}
+                100% {background-color: red; left: 0px; top: 0px;}
+            }
+
+            /* Tooltip container */
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            /*Tooltip text*/
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                
+                /*Position the tooltip text - see examples below*/
+            
+                position: absolute;
+                z-index: 1;
+            }
+
+            /**/
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+
+            #img1 {
+                border-radius: 50%;
+            }
+
+            #img2 {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 5px;
+                width: 150px;
+            }
+
+            #img2:hover {
+                box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+            }
+
+            #img3 {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            div.polaroid {
+                width: 80%;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin-bottom: 25px;
+            }
+
+            div.container {
+                text-align: center;
+                padding: 10px 20px;
+            }
+
+            body {margin: 25px;}
+
+            .container1{
+                position: relative;
+            }
+
+            .topleft {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                font-size: 18px;
+                color: white;
+            }
+
+            .topright {
+                position: absolute;
+                top: 8px;
+                right: 16px;
+                font-size: 18px;
+                color: white;
+            }
+
+            .bottomleft {
+                position: absolute;
+                bottom: 8px;
+                left: 16px;
+                font-size: 18px;
+                color: white;
+            }
+
+            #img4 {
+                width: 100%;
+                height: auto;
+                opacity: 0.3;
+            }
+
+            .container2 {
+                position: relative;
+                width: 50%;
+            }
+
+            .img5 {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #008CBA;
+            }
+
+            .container2:hover .overlay {
+                opacity: 1;
+            }
+
+            .text {
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform:  translate(-50%, -50%);
+            }
+
+            /*Fade in box example*/
+
+            .container3 {
+                position: relative;
+                width: 50%;
+            }
+
+            .img6 {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
+
+            .container3:hover .img6 {
+                opacity: 0.3;
+            }
+
+            .container3:hover .middle {
+                opacity: 1;
+            }
+
+            .text {
+                background-color: #4CAF50;
+                color: white;
+                font-size: 16px;
+                padding: 16px 32px;
+            }
+
+            .container4 {
+                position: relative;
+                width: 50%;
+            }
+
+            .img7 {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .overlay1 {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                right: 0;
+                background-color: #008CBA;
+                width: 100%;
+                height: 0;
+                transition: .5s ease;
+            }
+
+            .container4:hover .overlay1 {
+                bottom: 0;
+                height: 100%;
+            }
+
+            .text1 {
+                white-space: nowrap;
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                overflow: hidden;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50);
+            }
+
+            .img8:hover {
+                transform: scaleX(-1);
+            }
+
+            div.gallery {
+                    border: 1px solid #ccc;
+            }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery .imgg{
+                width: 100%;
+                height: auto;
+
+            }
+            div.desc {
+                padding: 15px;
+                text-align: center;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .responsive1 {
+                padding: 0 6px;
+                float: left;
+                width: 24.99999%;
+            }
+
+            .img9 {
+                -webkit-box-reflect: below;
+            }
+
+            /*css masking*/
+            .mask1 {
+                -webkit-mask-image: url(C:/chandan/image/w3logo.png);
+                mask-image: url(C:/chandan/image/w3logo.png);
+
+            }
+
+            /*CSS bottons*/
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            .button2 {background-color: #008CBA;} /*Blue*/
+            .button3 {background-color: #f44336;} /*Red*/
+            .button4 {background-color: #e7e7e7; color: black;} /*Gray*/
+            .button5 {background-color: #555555;} /*Black*/
+
+            .button11 {font-size: 10px;}
+            .button12 {font-size: 12px;}
+            .button13 {font-size: 16px;}
+            .button14 {font-size: 20px;}
+            .button15 {font-size: 24px;}
+
+            .button111 {border-radius: 2px;}
+            .button112 {border-radius: 4px;}
+            .button113 {border-radius: 8px;}
+            .button114 {border-radius: 12px;}
+            .button115 {border-radius: 50%;}
+
+            /*Hoverable buttons*/
+
+            .hbutton1 {
+                background-color: white;
+                color: black;
+                border: 2px solid #4CAF50;
+            }
+
+            .hbutton1:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+            .hbutton2 {
+                 background-color: white;
+            }
+
+            .btn1 {
+                background-color: white;
+                color: black;
+                border: 2px solid #4CAF50;
+            }
+
+            .btn1:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .btn2 { 
+                background-color: white;
+                color: black;
+                border: 2px solid #008CBA;
+
+            }
+
+            .btn2:hover {
+                background-color: #008CBA;
+                color: white;
+            }
+
+            .btn3 {
+                background-color: white;
+                color: black;
+                border: 2px solid #f44336;
+            }
+
+            .btn3:hover {
+                background-color: #f44336;
+                color: white;
+            }
+
+            .btn4 {
+                background-color: white;
+                color: black;
+                border: 2px solid #e7e7e7;
+            }
+
+            .btn4:hover {
+                background-color: #e7e7e7;
+            }
+
+            .btn5 {
+                background-color: white;
+                color: black;
+                border: 2px solid #555555;
+            }
+
+            .btn5:hover {
+                background-color: #555555;
+                color: white;
+            }
+
+            /*shadow button*/
+            .sbutton1 {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            }
+            .sbutton2:hover {
+                box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            /*Disabled button*/
+
+            .disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            /*width button*/
+
+            .wbutton1 {
+                width: 250px;
+            }
+
+            .wbutton2 {
+                width: 50%;
+            }
+            .wbutton3 {
+                width: 100%;
+            }
+
+            /* Button on Image */
+            .container4 {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .container4 .img10 {
+                width: 100%;
+                height: auto;
+            }
+
+            .container4 .btn6 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #f1f1f1;
+                color: black;
+                font-size: 16px;
+                padding: 16px 30px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            .container4 .btn6:hover {
+                background-color: black;
+                color: white;
+            }
+
+            /*------------------*/
+
+            /*----Animated Buttons-----*/
+
+            .button14 {
+                display: inline-block;
+                border-radius: 4px;
+                background-color: #f4511e;
+
+            }
+
+            /* ---Pagination--- */
+
+            .pagination {
+                display: inline-block;
+            }
+
+            .pagination .a1 {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            /*create column*/
+
+            .newspaper {
+                column-count: 3;
+                column-gap: 40px;
+                column-rule-style: solid;
+                /* column-rule-width: 1px; */
+                column-rule-color: lightblue;
+                column-width: 100px;
+            }
+
+            .h2 {
+                column-span: all;
+            }
+
+            .resize1 {
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                resize: horizontal;
+                overflow: auto;
+            }
+	</style>
+
+</head>
+<body>
+
+    <!--User interface resize-->
+
+    <h2>The resize property </h2>
+
+    <div class="resize1">
+        <h3>Q7. What are the new form elements introduced in HTML5?</h3>
+
+        <p>The new form elements introduced in HTML5 are:
+
+datalist – specifies a list of options for input controls
+keygen – generates an encryption key
+output – defines the result of an expression
+progress – heads only in the direction of 100% of the max value
+meter – provides for a gauge, displaying a general value within a range</p>
+
+    </div>
+    <br><br>
+
+    <!--Create column count-->
+
+    <h1 class="h2">Create multiple columns</h1>
+
+    <div class="newspaper">
+        What is long polling?
+Ans. Long polling is a technique of having a persistent connection with the server. In long polling, the client polls the server requesting new information. The server holds a client’s connection open for as long as possible. The connection is closed only after the data is sent back to the client or connection timeout occurs.
+
+Long Polling Flow:
+
+A request is sent to the server.
+The server holds a client’s connection until new data is available.
+The server responds to the request when the new information appears.
+The browser immediately sends another request.
+    </div>
+
+    <br><br>
+    <!--Simple Pagination-->
+
+    <div class="pagination a1">
+        <a href="#" class="a1">&laquo;</a>
+        <a href="#" class="a1">1</a>
+        <a href="#" class="a1">2</a>
+        <a href="#" class="a1">3</a>
+        <a href="#" class="a1">4</a>
+        <a href="#" class="a1">5</a>
+        <a href="#" class="a1">6</a>
+        <a href="#" class="a1">7</a>
+        <a href="#" class="a1">&raquo;</a>
+    </div>
+
+    <br>
+
+    <!-- CSS button styling-->
+
+    <button>Default button</button>
+    <a href="#" class="button">Link Button</a>
+    <button class="button">Button</button>
+    <input type="button" class="button" value="input button">
+
+    <br>
+    <br>
+
+    <button class="button">Green</button>
+    <button class="button button2">Blue</button>
+    <button class="button button3">Red</button>
+    <button class="button button4">Gray</button>
+    <button class="button button5">Black</button>
+
+    <br>
+    <br>
+
+    <button class="button button11">10px</button>
+    <button class="button button12">12px</button>
+    <button class="button button13">16px</button>
+    <button class="button button14">20px</button>
+    <button class="button button15">24px</button>
+
+    <br>
+    <br>
+
+    <button class="button button111">2px</button>
+    <button class="button button112">4px</button>
+    <button class="button button113">8px</button>
+    <button class="button button114">12px</button>
+    <button class="button button115">50%</button>
+
+    <br>
+    <br>
+
+    <button class="button btn1">green</button>
+    <button class="button btn2">Blue</button>
+    <button class="button btn3">Red</button>
+    <button class="button btn4">Gray</button>
+    <button class="button btn5">Black</button>
+
+    <br><br>
+
+    <!--Shadow button-->
+
+    <h2>Shadow button</h2>
+
+    <p>Use the box-shado property to add shadows to the button:</p>
+
+    <button class="button sbutton1">Shadow Button</button>
+    <button class="button sbutton2">Shadow on the hover</button>
+
+    <br>
+
+    <!--Disabled button-->
+
+    <h2>Disabled button</h2>
+    <button class="button disabled">Disabled button</button>
+
+    <br>
+    <!--Width button-->
+    <h2>Set button width</h2>
+    <button class="button wbutton1">250px</button> <br>
+    <button class="button wbutton2">50%</button> <br>
+    <button class="button wbutton3">100%</button> <br>
+
+
+    <!--Button on image-->
+
+    <p>Add a button on an image:</p>
+    <div class="container4">
+        <img src="C:\chandan\image\img2.jpg" style="width: 100%" class="img10">
+        <button class="btn6">Button</button>
+    </div>
+
+    <h1>The mask image property</h1>
+
+    <h3>An image with a mask layer image:</h3>
+    <div class="mask1">
+        <img src="C:/chandan/image/img_5terre.jpg" width="600" height="400">
+
+
+    </div>
+    <h1>CSS Styling images</h1>
+
+    <img src="C:\chandan\image\img_tree.png" class="img9">
+    <h2>Responsive image gallery</h2>
+
+    <h4>Resize the browser window to see the effect.</h4>
+
+    <div class="responsive1">
+        <div gallery>
+            <a target="_blank" href="C:\chandan\image\img2.jpg">
+                <img src="C:\chandan\image\img2.jpg" width="600" height="400" class="imgg">
+            </a>
+            <div class="desc">Add a description of the image</div>
+        </div>
+    </div>
+
+
+    <div class="responsive1">
+        <div gallery>
+            <a target="_blank" href="C:\chandan\image\img1.jpg">
+                <img src="C:\chandan\image\img1.jpg" width="600" height="400" class="imgg">
+            </a>
+            <div class="desc">Add a description of the image</div>
+        </div>
+    </div>
+
+
+    <p>Move your mouse over the image.</p>
+    <img src="C:\chandan\image\img2.jpg" class="img8">
+    <div class="container4">
+        <img src="C:\chandan\image\img2.jpg" class="img7"
+        >
+        <div class="overlay1">
+            <div class="text1">hello world</div>
+        </div>
+    </div>
+    <div class="container3">
+        <img src="C:\chandan\image\img2.jpg" class="img6" style="width: 100%">
+        <div class="middle">
+            <div class="text">John doe</div>
+        </div>
+    </div>
+    <div class="container2">
+        <img src="C:\chandan\image\img2.jpg" class=".img4">
+        <div class="overlay">
+            <div class="text">hello world</div>
+        </div>
+    </div>
+    <h2>Rounded images</h2>
+    <img src="C:\chandan\image\bird.jfif" alt= "bird" width="300" height="300" id="img1">
+
+    <h2>Thumbnail images</h2>
+    
+    <a target="_blank" href="C:\chandan\image\bird.jfif"> <img src="C:\chandan\image\bird.jfif" width="150px" id="img2">
+    </a>
+
+    <img src="C:\chandan\image\bird.jfif" style="width: 25%" id="img3">
+
+    <p>Responsive polaroid images/cards</p>
+
+    <div class="polaroid">
+        <img src="C:\chandan\image\bird.jfif" style="width: 100%">
+        <div class="container">
+            <p>Bird1</p>
+        </div>
+    </div>
+
+    <div class="container1">
+        <img src="C:\chandan\image\img2.jpg" width="1000" height="300">
+        <div class="topleft">Top left</div>
+        <div class="topright">Top right</div>
+        <div class="bottomleft">bootom left</div>
+
+    </div>
+
+    <h2>Basic tooltip</h2>
+    <p>Move the mouse over the text below:</p>
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span></div>
+    <div id="animat"></div>
+    <div class="transform3" hover= "width: 300px height: 300px"></div>
+
+    <div class="transform2">defines a 3d translation</div>
+
+<h1>The text overflow property</h1>
+<p class="test1">Finding a good hoting to host your website</p>
+
+<p class="test2">Place css at the top and script referencing at the bottom or external files</p>
+
+<h1 id="shadow1">Web Developer Interview Questions & Answers</h1>
+
+<h2 id="shadow2">Tell me about yourself and why do you want to become a Web Developer</h2>
+
+<h2 id="shadow3">If you hire me as your Web Developer, I assure you I will fit into your team quickly, I will always put the commercial needs of your business at the forefront of everything I do, and the work I carry out will be consistent to a first-class standard.”
+</h2>
+
+<h1 id="shadow4">Text-shadow with yellow and blue neon glow!</h1>
+
+<h2 id="shadow5">What is pseudo-class</h2>
+
+<div id="shadow6">It is a css technique that sets the style when an element changes its stats E.g. style changes whenmouse hover, different styles for visited or unvisited links, etc
+
+<p>There are 4 different types of pseudo-classes: Links, dynamic, structural, others</p>
+</div> <br><br>
+
+<div id="shadow7"><h2 id="shadow5">How can you reduce page loading time</h2></div>
+
+<div id="shadow8">
+            <li>Reduce the image size</li>
+        <li>Use the latest generation formats for images</li>
+        <li>Postpone uploading off-screen images</li>
+        <li>Create accelerated mobile pages (AMPs)</li>
+    </li>
+</div>
+
+<br>
+
+<div id="shadow9">
+    <li>remove unnecessary widgets</li>
+    <li>avoid multiple redirects</li>
+    <li>place css at the top and script referencing at the bottom or external files</li>
+</div>
+
+<h1>The word wrap property</h1>
+
+<p class="test3">
+    What is cors? why is it important?
+
+    Ans. Cross-Origin Resource sharing (CORS) is a browser mechanism that allows controlled access to resources located outside of a given domain. It enables a web page from one domani to access a resource with a different domain (a cross-domain request). It is a relaxation of the same origin policy implemented in modern browsers.
+</p>
+
+<p class="test4">Due to the same origin policy followed by XMLHttpRequest and fetch</p>
+
+<p>Javascript can make calls to <span class="test5">URLs that live on </span> the same origin as the location where the script is running</p>
+
+<p class="test6">Without features like CORS, websites are restricted to accessing resources from the same origin.</p>
+
+	<p><b>Note:</b> the ie 9 and earlier versions dont support css3 animation property.</p>
+
+	<p>See the rectangle background from RED to BLACK.</p>
+
+	<div id="div1">careers@bigspire.com </div>
+
+    <p>Here, the middle sections of th image are repeated to create the border:</p>
+    <p id="borderimg">border-image: url(C:\chandan\image\border1.jpg) 30 round;</p>
+
+    <p id="borderimgg">border-image: url(C:\chandan\image\border2.jpg) 30 round;</p>
+
+    <p id="borderimggg">border-image: url(C:\chandan\image\border2.jpg) 50 strethc;</p>
+
+    <div id="example1">
+        <h1>HTML Interview Questions</h1>
+        <p>What is Marquee in HTML
+    The marquee is used to scroll the text on the webpage.
+It automatically scrolls the image or text up, down, left, or right.
+You must use tags to apply for a marquee.
+</p>
+
+<p>
+    What is Marquee in HTML
+    The marquee is used to scroll the text on the webpage.
+It automatically scrolls the image or text up, down, left, or right.
+You must use tags to apply for a marquee.
+</p>
+
+</div>
+
+<h1>The transalate method()</h1>
+<p>The translate () method moves an element from its current position:</p>
+<div class="transform1">Due to the same-origin policy followed by XMLHttpRequest and fetch, JavaScript can only make calls to URLs that live on the same origin as the location where the script is running. 
+
+</div>
+
+<div id="myDiv" class="transform1">This div element is roated closewise 20 deg</div>
+
+<div class="transform1" id="divskew">this div element is skewed</div>
+<div id="grad1"></div>
+
+<div id="grad2"></div>
+
+<div id="grad3"></div>
+
+<div id="grad4"></div>
+
+<div id="grad5"></div>
+
+<div id="grad6"></div>
+
+<div id="grad7"></div>
+
+<div id="grad8"></div>
+
+<div id="grad9"></div>
+
+<div id="grad10"></div>
+
+<div id="grad11"></div>
+
+<div id="grad12"></div>
+
+<h2>closest-side</h2>
+<div id="grad13"></div>
+
+<h2>farthest-side</h2>
+<div id="grad14"></div>
+
+<h2>closest-corner</h2>
+<div id="grad15"></div>
+
+<h2>Conic gradient</h2>
+<div id="grad16"></div>
+
+<h2>Conic gradient 5 colors</h2>
+<div id="grad17"></div>
+
+<h2>conic gradient defined degree for each color</h2>
+<div id="grad18"></div>
+
+<h2> Pie chart gradient</h2>
+<div id="grad19"></div>
+
+<div id="grad20"></div>
+
+<h2>Conic gradient- with a specified center position</h2>
+<div id="grad21"></div>
+
+<div id="grad22"></div>
+
+<div id="grad23"></div>
+
+</body>
+</html>

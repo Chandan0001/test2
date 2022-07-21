@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS template using grid</title>
+
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, Helventica, sans-serif;
+		}
+
+		/*Style the header*/
+
+		.header {
+			grid-area: header;
+			background-color: #f1f1f1;
+			padding: 30px;
+			text-align: center;
+			font-size: 35px;
+		}
+
+		/*The grid container*/
+
+		.grid-container {
+			display: grid;
+			grid-template-areas: 'header header header header header header' 
+			'left left middle middle right right'
+			'footer footer footer footer footer footer';
+		}
+
+		/*The grid container*/
+
+		
+		.left,
+		.middle,
+		.right {
+			padding: 10px;
+			height: 300px;
+		}
+
+		/* style the column */
+		.left {
+			grid-area: left;
+		}
+
+		.middle {
+			grid-area: middle;
+		}
+
+		.right {
+			grid-area: right;
+		}
+
+		.footer {
+			grid-area: footer;
+			background-color: #f1f1f1;
+			padding: 10px;
+			text-align: center;
+		}
+
+		@media (max-width: 600px) {
+			.grid-container {
+				grid-template-areas: 'header header header header header header'
+				'left left left left left left' 
+				'middle middle middle middle middle middle' 
+				'right right right right right right' 
+				'footer footer footer footer footer footer';
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="grid-container">
+		<div class="header">Header</div>
+
+	<div class="left" style="background-color: #aaa;">
+
+		<p id="demo1">Product: </p>
+		<p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+		<p id="demo2"></p>
+
+		<script type="text/javascript">
+			var x = myFunction (4, 3);
+			document.getElementById("demo1").innerHTML = x;
+
+			function myFunction (a, b)
+			{
+				return a*b;
+			}
+
+			function toCelsius (f) {
+				return (5/9) * (f-32);
+			}
+
+			document.getElementById("demo2").innerHTML = toCelsius(77);
+
+		</script>
+
+		<button onclick="document.getElementById('demo3').innerHTML=Date()">The time is?</button>
+
+		<p id="demo3"></p>
+
+		<!--Convert string to lower case-->
+
+		<p style="color: red;">Convert String to lower case</p>
+
+		<button onclick="myFunction2()">Try it</button>
+
+		<p id="lower">HELLO WORLD!</p>
+
+		<script type="text/javascript">
+			function myFunction2(){
+				let text=document.getElementById("lower").innerHTML;
+				document.getElementById("lower").innerHTML= text.toLowerCase();
+
+			}
+		</script>
+
+
+
+	</div>
+	<div class="middle" style="background-color: #bbb">
+		<h2>Javastring string methods</h2>
+
+		<p>The slice() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+		<p id="demo4"></p>
+
+		<script type="text/javascript">
+			let str = "Apple, Banana, Kiwi";
+			document.getElementById("demo4").innerHTML = str.slice(7,13);
+		</script>
+
+		<!--padStart() method-->
+
+		<p>The padStart() method pads a string with another string:</p>
+		<p id="pads"></p>
+
+		<script type="text/javascript">
+			
+			let text="5";
+			document.getElementById("pads").innerHTML=text.padStart(4,"x");
+		</script>
+	</div>
+	<div class="right" style="background-color: #ccc">
+		<!--Replace() method-->
+
+		<p>Replace microsoft with w3school in the paragraph below:</p>
+
+		<button onclick="myFunction()">Try it</button>
+
+		<p id="demo5">Please visit Microsoft</p>
+
+		<script type="text/javascript">
+			function myFunction() {
+				let text = document.getElementById("demo5").innerHTML;
+
+			document.getElementById("demo5").innerHTML = text.replace("Microsoft", "W3Schools");
+		}
+
+
+		</script>
+
+		<!--Convert string to upper case-->
+
+		<p>Convert string to upper case</p>
+
+		<button onclick="myFunction1()">try it</button>
+
+		<p id="demo6">Hello World</p>
+
+		<script type="text/javascript">
+			function myFunction1()
+			{
+				let text= document.getElementById("demo6").innerHTML;
+				document.getElementById("demo6").innerHTML= text.toUpperCase();
+			}
+		</script>
+
+
+	</div>
+
+	<div class="footer">Footer</div>
+
+</div>
+</body>
+</html>

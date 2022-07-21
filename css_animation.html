@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="C:/Users/Sharma/test2/site2/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+	<title>JavaScript</title>
+
+	<style type="text/css">
+		.col-md-1 {
+			border-width: 1px;
+			color: darkred;
+		}
+	</style>
+</head>
+<body>
+
+<h2>JavaScript String Method</h2>
+
+<div class="container">
+  ...
+  yucvugbfnyhygyu
+  uhfghkinbnhugyfv
+  uynfgkuhibju
+  mgnkjnhiyu
+
+  <div class="container-fluid">
+  ...
+  puk;,k;iyjko;p
+  ijyghliuhk
+  yuhkjoiyuojko
+  ht6ukgih8j
+</div>
+</div>
+
+<div class="container-fluid">
+  ...
+  gyjiohtgmhjohy
+  jhugh7fg7ighg
+  yjguynv
+  jkfgyu
+</div>
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+</div>
+
+<div class="row">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-6">.col-md-6</div>
+  <div class="col-md-6">.col-md-6</div>
+</div>
+</div>
+
+<p style="color:blue;">The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+<p id="index"></p>
+
+<p style="color:blue">The LastIndexOf() method returns the position of the last occurrence of a specified text:</p>
+<p id="lindex"></p>
+
+<script type="text/javascript">
+	let str= "Please locate where 'locate occurres!'";
+	document.getElementById("index").innerHTML=str.indexOf("locate");
+	document.getElementById("lindex").innerHTML=str.lastIndexOf("locate")
+</script>
+
+<!--JavaScript Global Methods-->
+
+<h2>JavaScript Global Methods</h2>
+<p>The Number() methods converts variables to numbers:</p>
+
+<p id="NumGlobal"></p>
+<p id="NumGlobal1"></p>
+
+<script type="text/javascript">
+	document.getElementById("NumGlobal").innerHTML=
+	Number(true) + "<br>" +
+	Number(false) + "<br>" +
+	Number("10") + "<br>" +
+	Number(" 10") + "<br>" +
+	Number("10 ") + "<br>" +
+	Number(" 10  ")+ "<br>" +
+	Number("10.33") + "<br>" +
+	Number("10,33") + "<br>" +
+	Number("10 33") + "<br>" +
+	Number("John") + "<br>" ;
+	
+
+	let x= new Date("1970-01-05");
+	document.getElementById("NumGlobal1").innerHTML=Number(x);
+
+</script>
+</body>
+</html>
